@@ -18,7 +18,8 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
+gem "hiredis"
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -27,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+
+gem 'activejob-uniqueness'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
